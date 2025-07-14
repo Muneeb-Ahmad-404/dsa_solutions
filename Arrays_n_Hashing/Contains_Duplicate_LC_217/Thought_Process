@@ -1,0 +1,36 @@
+Problem: We are given an array and we need to configure if the array has repeating numbers/elements
+
+Brute force: We need to go use two pointers on the array.
+            1    Two loops i and j
+            2    i goes from 0 to n-1
+            3    and for each value of n j goes from 0 to n-1
+            4    we compare values for nums[i] and nums[j]
+            5    if same return true
+            6    else continue checking
+Time complexity O(n^2)
+Space complexity O(1)
+
+
+Brute Force (optimized): point 3 can be optimized
+                         we can have j start from i instead of 0 optimizing the solution a bit
+Time complexity O(n^2)
+Space complexity O(1)                       
+                
+
+Set approach: we use set.
+                we add all valus in set
+                if len(set) != len(nums)
+                return true 
+                else false
+Time complexity O(n)
+Space complexity O(n)  
+
+
+Hash approach: we use a hashmap
+               we start adding values one by one to a hashmap
+               number is the key and the count is value
+               if a key is already present
+               return true
+               else false
+Time complexity O(n)
+Space complexity O(n)  
