@@ -23,7 +23,6 @@ My goal is not just to solve problems, but to **understand the 'why' and the 'ho
 
 This journey is heavily inspired by and complements my learning from:
 
-* **Princeton University's Algorithms Course (Parts I & II):** Providing rigorous theoretical understanding and mathematical foundations.
 * **NeetCode.io's Roadmaps (e.g., NeetCode 150):** Guiding problem selection and offering excellent insights into common interview patterns and articulation techniques.
 * **LeetCode.com:** The primary platform for hands-on problem-solving practice and verification.
 
