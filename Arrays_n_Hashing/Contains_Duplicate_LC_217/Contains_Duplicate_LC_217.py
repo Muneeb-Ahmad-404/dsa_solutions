@@ -1,4 +1,5 @@
-from testing import test
+from dsa_solutions.testing import test 
+
 
 def bruteforce(nums):
     has_duplicate = False
@@ -42,6 +43,5 @@ if __name__ == '__main__':
 
     functions = [bruteforce, set_approach1, set_approach2, hash_approach]
 
-    my_tester = testing()
-    my_tester.test(test_cases, functions)
+    test(test_cases, functions)
         

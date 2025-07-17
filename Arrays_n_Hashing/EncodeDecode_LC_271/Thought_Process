@@ -1,0 +1,19 @@
+I would be provided with a list of strings. I have to encode it to a single strings and 
+then decode the single to the list again.
+
+I can simply add all the list to a single string and save the length of individual strings for 
+encoding. And use that combined string and the list of lengths for decoding.
+
+Problem: The strings can have numbers too, how to differ between length and string numbers?
+Solution Add something that cannot be in the list as a divider lets say '#'
+Well # can be in the list but if we put it with the length at the start we can skip going through
+the actual strings we can jump places from one length to the next.....
+
+
+Edge cases:
+        the string list could be empty
+        a string could be of length 1
+        a string could be empty among the list
+        what if the length is greater then 9 (2 digit or 3 or even more)
+        .......(its all the same i guess)
+            

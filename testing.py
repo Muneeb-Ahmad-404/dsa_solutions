@@ -1,4 +1,4 @@
-def test(self,  testcases, functions):
+def test(testcases, functions):
     for i in range(len(testcases)):
         for function in functions:
             print(function.__name__)
