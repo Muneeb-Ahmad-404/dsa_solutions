@@ -3,9 +3,7 @@ from dsa_solutions.testing import test
 def encode(strs):
     encoded = ""
     for data in strs:
-        length = len(data)
-        length = str(length)
-        encoded += length+'#'+data
+        encoded += str(len(strs))+'#'+data
     return encoded
 
 def decode(s):

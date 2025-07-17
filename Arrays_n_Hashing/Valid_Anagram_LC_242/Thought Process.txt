@@ -1,0 +1,48 @@
+I have been provided with two strings s and t, if t can be represented by rearranging s or opposite 
+return true else false.
+
+Brute Force:
+    We use two loops i and j one runs on lets say s and the other on t
+    for each value of s[i] we will check all values of t[j]
+    and if s[i] == t[j] we remove s[i] and t[j] from both strings and if i cannot find any t[j] for s[i]
+    return false
+    after the loops we check what is left of two strings and if either one of the strings is 
+    not empty we return false else true
+
+Time complexity = (n^2)
+
+Hash map:
+    We use two hashmaps to store charachter:count pairs for both s and t. takes n Time
+    and then compare the size for both and the count for both. if its the same we return true
+    else false
+
+Time complexity = O(3n)
+Space Complexity = O(2n)
+
+    OR
+    We can use a hashmap, for the first string increment the charachter count and for the 
+    second string decrement the count. after that run a loop through the hashmap and if any value is
+    non zero i return false else true.
+
+Time complexity = O(3n)
+Space Complexity = O(n)
+
+
+Sorting:
+    Sort both strings, then compare them. if sort(s) == sort(t) return true else false
+
+Time complexity:O(nlogn)
+Space complexity:O(n) as sorting uses n space and string cannot be sorted so we sort it as a list
+and then add it to string so it uses n space too
+
+
+
+Edgecases:
+    one of the two strings is empty
+    the strings are both empty
+    the strings could contain capital letters too
+    the strings could contain different unicode characters other then alphabets.
+    strings have same charachter
+    strings have different charachter
+    strings have different lengths
+    very long strings
