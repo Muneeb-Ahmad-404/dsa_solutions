@@ -1,0 +1,65 @@
+In the two sum problem we are provided with a list of integers and a integer value.
+We have to find to distinct indices whose value when added results in the integer provided (the target)
+There is going to be exactly one solution as per the question statement.
+
+Brute Force:
+    We use two loops i and j.
+    i starts from 0 to len(arr)-2 and j starts from i+1 to len(arr)-1 for each value of i.
+    now if arr[i]+arr[j] == target we return i and j else continue to the next iteration
+
+Time Complexity : O(n^2)
+Space Complexity : O(1)
+
+This solution is too slow we need a fast one.
+
+
+Hash solution: 
+    We add all the values of the arr to a hash as hash[value] = [index] (index list if the 
+    values are repeating).
+    Then we start a loop over the hash lets say for value:hash
+    we subtract the current hash value with the target and search for the counter part
+    other = target - value (only if the target is greater then value)
+    if hash[other] does not exist then move to next iteration else proceed
+    if the index of hash value and other is same lets say same value and index and the hash list has
+    no index other then one we continue to next iteration
+    else return the two indices.
+    return the index i and j.
+
+Time Complexit(O(N))
+Space Complexity O(K) where k is the biggest value of the list. 
+
+A better way to do this is to add values to hashmap with index of the last encountered value
+like if the values are repeating the hash is updated by the index of the last.
+and then enumerate on the nums array. where we use the diff and find it in the hashmap
+if it exists in the hashmap and if the value stored in the hashmap is same as i then continue else 
+return i and the value stored (less lines of code and cleaner)
+
+Another cleaner version of this is we can check for our solution while we are initializing the 
+hash_map. we iterate through the given array and check if the diff = target - curr exist in our hash_map
+if it does not we add the curr to our map and continue to move. this way we can check for our 
+solution faster.
+
+PS: Both these optimized solutions (the last two) are from neet code and are mentioned in the 
+function name as NC as well.
+
+This sorting one is from NC too
+Sorting:
+    we create a new list with values as [value, idx] by enumerating the given array and sort it
+    we use two pointers one at start i and one at end j.
+    if the sum of values for arr[i] and arr[j] (based on the sorted new array) not == to target
+    we check if the target is greater then the sum we increment i.
+    In the other case we decrement the j until we find our solution. this goes on untill
+    i<j.
+
+    time complexity : O(nlogn)
+
+
+Edge cases: 
+    The solution exist just fine
+    The list is empty (cannot be based on the question)
+    The target cannot be obtained from the list
+    The target is -1
+    The list contains -ve values and the target is positive
+    The list is too large
+
+    For any problem the output would be []

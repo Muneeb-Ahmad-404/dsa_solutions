@@ -58,7 +58,7 @@ def hash2(attributes):
     for key in hash:
         if hash[key] != 0:
             return False
-    return True
+    return True     
         
 
 
