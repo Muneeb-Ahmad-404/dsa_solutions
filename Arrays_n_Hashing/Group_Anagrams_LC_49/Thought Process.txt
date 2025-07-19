@@ -1,0 +1,32 @@
+We are given a list of different strings.
+We have to group those strings based on if they are anagram to eachother
+
+
+Sorting:
+    Simply sort all the strings 
+    compare and store the indices of the strings if they are equal. using a loop
+    at the end of that iteration add a group of the strings on those indices and append it to result
+    after the loop.
+
+    this is gonna take O(nlogn) time because of the sorting nlogn and the loop to compare elements
+    time complexity : O(n*klogk) the k is the avg length of the string.
+    space complexity : O(1) or O(n) if we count the solution which we need to return
+
+Hashmaps:
+    we can use hashmaps in that case we will have the complexity
+    of O(n*k). as to make the hashmaps for one string we will have complexity of k and for n strings
+    its gonna be n*k. Now comparing the hashmaps we can group them which is gonna be n log n or so.
+
+    we can still iterate through all strings and create a string with 26 size intialized to 0
+    based on the occurences change the values and then after a string is traversed store the 
+    values, so on for all the strings, and then compare those values for grouping.
+    time complexity = O(n*k)
+    space complexity = O(n)
+
+Edge cases:
+    the list could be empty
+    the list contains normal anagrams
+    the list contains some empty strings
+    the list has no anagrams
+    the list is too large
+    the string is too large
