@@ -1,0 +1,33 @@
+time:2:17 2:52 unknown issue
+We have been provided with a list of numbers and we have to return a list of those numbers squared
+in sorted form.
+
+Brute Force:
+    We need to run a loop over the list provided, squaring each value.
+    Then we can sort that using function sort().
+    time complexity : O(nlogn)
+    space complexity :O(1)
+
+two-pointer:
+    we place two pointers lets say i on start of list and j on the end.
+    we square both i and j elements
+    then compare if i > j then i is placed at j's position
+
+Understanding
+    [-1, 0, 1, 2, 3, 4, 5]  [0, 1, 1, 4, 9, 16, 25]
+      i                 j                      k  j chosen   max(i^2, j^2)
+      i              j                      k     j chosen      
+      i            j                      k       j chosen
+      i        j                       k          j chosen
+      i     j                       k             j
+      i  j                       k                i
+         ij                  k                    0
+
+    time complexity: O(n) as we have to run a single loop only
+    space : O(n)     as we have to create another array to store our result
+
+
+Test cases:
+    array may be empty
+    all the numbers can be -ve 
+    arrays are too long
