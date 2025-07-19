@@ -1,0 +1,42 @@
+Given an array we have to find the commulative sum or running sum of all charachters.
+So the answer is going to be the same size as of the provided array. The only difference is that
+each number is going to be the sum of itself and the previous updated one with the same method.
+
+if i !=0 then i += i-1 for i in range(array_size).
+
+Plain loop solution:
+    We use a for loop and for each iteration we keep updating the values either in the same array or 
+    a new one depending upon if we want to preserve the input.
+    if i !=0 then arr[i] += arr[i-1] for i in range(len(arr)).
+        as
+
+Time complexity : O(n) as we are accessing each index just once.
+Space compexity : O(1) if we donot try to preserve the input
+
+Recursive Solution? start from arr[n] then arr[n] = recursive(n-1)+arr[n], each time sending n as n-1
+to the function again, base case is when the value of i is -1 we back-off (return 0).
+Lets not implement the recursive solution for this one. 
+Its gonna take the same time but more space complexity.
+
+
+Itertools Solution:
+I learnt something new and it is itertools.accumulate(arr). This function requires the itertools lib
+and is used to perform operations on an iterable data structure. By default it performs the commulat-
+-ion and if we pass any specific operator it can return based on that operator.
+The operation runs completely in memory and stores all the answers in the memory and return all at 
+the end of the function as seperate numbers thats why we need to store them either as a list or sep-
+-erate variables
+(list) itertools.accumulate(arr). The understanding of itertools is wrong right now. It saves every
+thing in memory and gives thing on demand. thats what i got.
+
+This can do the thing in O(n) time as well
+But it requires space O(n) as well
+ 
+
+
+Edge Cases: 
+        Array is empty
+        The array has all 0's
+        The array is too big
+        The array has all negative numbers.
+
