@@ -1,4 +1,5 @@
 import math
+from dsa_solutions.testing import test
 from collections import defaultdict
 
 def brute_force(attributes):
@@ -25,6 +26,17 @@ def hash_approach(attributes):
             groups += sum(range(value))
     return groups
 
+if __name__ == '__main__':
+    test_cases = [
+    ([[1, 2, 3, 1, 1, 3]], 4),
+    ([[1, 1, 1, 1]], 6),
+    ([[1, 2, 3]], 0),
+    ([[1, 2, 3, 1]], 1),
+    ([[7]], 0),
+    ([[1, 100, 1, 100, 50]], 2),
+    ([[1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 6, 6, 7]], 7),
+    ]
 
-print(brute_force([[1,2,3,4,1,5,1,2,3,3,1,1]]))
-print(hash_approach([[1,2,3,4,1,5,1,2,3,3,1,1]]))
+    functions = [brute_force, hash_approach]
+
+    test(test_cases, functions)
