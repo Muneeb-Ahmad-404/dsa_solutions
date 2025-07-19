@@ -1,0 +1,21 @@
+25 min
+We are provided with an array of numbers
+we need to find pairs of indices i and j where i<j and arr[i] == arr[j]
+and then we need to return the number of those pairs
+
+Brute Force:
+    we use two iterators i and j where i is at start and j at end.
+    i can go from 0 to len arr
+    and j can go fron i+1 to len arr.
+    when arr[i] == arr[j] we increment
+
+    time complexity :O(n^2)
+    space complexity: O(1)
+
+Hash approach:
+    add all the values to a hash as hash[number] = count
+    after that we need to traverse the hash
+    and for each key we use the value as (count-1+count-2+count-3...0)
+
+    time complexity : O(n)
+    space complexity : O(n)
