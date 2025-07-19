@@ -1,0 +1,46 @@
+Find_The_Highest_Altitude_LC_1732
+We are provided with an array, we have to find the commulative sum of the array and then
+we have to check the highest value in there.
+
+for commulative sum we can use
+            a loop to find commulative sum mannualy
+            the itertools to find the commulative sum automatically.
+            the better option is the loop one where space complexity is O(1)
+
+max_func:
+    we can use array.max function to get the highest value
+    Time complexity : O(n)
+    Space Complexity : O(1)
+
+iter_tools:
+    we can use itertools(arr, max) to get the max value of the array
+    Time complexity : O(n)
+    Space Complexity: O(n)
+
+sorting:
+    we can sort the array with nlogn time and pick the last element
+    Time complexity : O(nlogn)
+    Space Complexity : O(1)
+
+manual:
+    we can mannualy go through the whole loop picking up the highest value as we go on and 
+    return that
+    time complexity: O(n)
+    Space complexity : O(1)
+
+For these solutions we need to pair all these solutions with the loop used for commulative sum.
+increasing the complexity.
+
+What we can do is to use a single loop and use that for commulation and while going through that
+we keep track of the highest value as well
+time complexity:O(n)
+space complexity:O(1)
+
+
+Edge cases:
+    the numbers are all -ve
+    the arr is empty
+    the numbers are all same
+    the numbers are too many
+    the numbers are all 0
+    
