@@ -1,0 +1,18 @@
+We are give a list of strings, each string contains pre, post increment and pre, post decrement.
+We need to have variable with initial value 0. Now based on those strings, the increment of decrement
+we apply the operation to that variable and after the whole list is traversed 
+return the variable
+
+Solution:   
+    We can run a loop through the entire list and for each loop check if eithert the first or last value of the string is + or -. based on what we get perform the operation on the variable
+    time complexity : O(n)
+    space complexity : O(1)
+
+Edge cases: 
+    list is empty
+    list is too large
+    list has all decrements
+    list has all increments
+    these test cases are not going to occur as the question explicitly states it.
+    the given array does not follow the pattern
+    the given array has string smaller then size 3
