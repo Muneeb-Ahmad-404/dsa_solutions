@@ -1,0 +1,14 @@
+3:04 3 20
+we are provided with a list and we need to return a list that is a concatenation of two provided lists
+[provided]  result = [provided, provided]
+
+Brute force:
+    we can declared an empty array twice the size of the provided one
+    run a loop over the provided one 
+    and for add arr[i] at result[i] and result[i+n] for all values of i where n is the lenght of the given array.
+    time complexity:O(n)
+    space:O(n) required.
+
+Better:
+    we can use nums * 2 and python stuff etc
+    time complexity: O(n)
