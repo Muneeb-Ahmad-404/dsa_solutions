@@ -1,0 +1,26 @@
+We are provided with an array with binary values 0 or 1
+we need to find the most number of 1's present consecutively and return it
+
+Brute force: (true = make all possible sublists and check which contains all 1's and is largest)
+    initialize a max count var
+    We iterate over the nums
+    use another counter lets say m
+    when we face a 1 we increment m
+    when we face a 0 we update count as max(count, m) do this once after the loop as well
+    and m = 0
+    after the loop we return max.
+
+    time complexity: O(n) not truly brute force
+    space complexity: O(1)
+
+    or we can track zeroes and there indices and after all the traversal we find the difference
+    btw consecutive indices max of those differences is our answer.
+
+test_cases:
+    the array could be empty
+    array could be too short
+    could be too long
+    could have all ones
+    could have no ones
+
+
