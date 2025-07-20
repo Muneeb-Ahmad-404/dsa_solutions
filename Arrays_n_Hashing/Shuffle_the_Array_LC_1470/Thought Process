@@ -1,0 +1,21 @@
+We have been provided an array. the array is divided in to to parts each of n length(n is provided)
+lets say the left part is x part and right part is y.
+we have to return an array where the elements should be as x1, y1, x2, y2, and so on
+
+brute_force:
+    we make an empty list
+    we can use i and j iterators in a loopp
+    the i will start from 0 to n-1 and j will start from n to 2n-1
+    we will populate the new list by using list.append(arr[i]), list.append(arr[j])
+
+time complexity: O(n)
+Space Complexity: O(n)
+
+This is the best we are gonna get
+
+Edgecases:
+    list is empty
+    list is too large
+    list contains same elements
+    list contains negative elements.
+    etc
