@@ -1,0 +1,24 @@
+We have been provided with a list of numbers
+we need to put all the zeroes from the list to the end (they cant be between nonzero numbers)
+the relative order should still be maintained
+
+Brute Force:
+    we run a loop we count the number of zeroes while removing them aswell.
+    after counting zeroes run a loop on the count and add zeroes at end
+
+    or 
+    we can run a loop and whenver we face a zero we remove it from the index and add it to the end
+
+    time complexity: O(n^2) list.remove() takes n  time.
+    space complexity: O(1)
+
+Better:
+    A better solution would be to create an empty list
+    run a loop over the given list
+    whenever  we face a nonzero we add that to the list
+    and when its a zero we take that into account (use a variable to count)
+    then after the loop at the number of zeros at the end
+
+    time complexity: O(n)
+    space complexity: O(n)
+    
