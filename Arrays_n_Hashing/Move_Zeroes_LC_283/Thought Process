@@ -4,7 +4,9 @@ the relative order should still be maintained
 
 Brute Force:
     we run a loop we count the number of zeroes while removing them aswell.
-    after counting zeroes run a loop on the count and add zeroes at end
+    after counting zeroes run a loop on the count and add zeroes at end or whenever we face a zero
+    we can increment increment untill we find a nonzero and then displace them to previous indices
+    of zero keeping zero in count then at the end add zeros
 
     or 
     we can run a loop and whenver we face a zero we remove it from the index and add it to the end
@@ -21,4 +23,20 @@ Better:
 
     time complexity: O(n)
     space complexity: O(n)
+
+    or a modification that makes it a two pointer approach
+    we use two pointers i and j for the new created list.
+    while this we run a loop over given array.
+    in the array if we face a non zero we add that to the i pointer place and i++
+    else we add 0 to the j pointer place and j--
+
+    this is a bit better as it does not have the extra complexity to add the zeroes later.
+
+    two_pointer_2:
+    so basically we have two pointer read and write, we read and whenever its a nonzero we add to the write pointer and write pointer ++. after we have covered the list we fill the rest of the places with zero
     
+    time complexity:O(n)
+    space complexity: O(1)
+
+
+    the problem is in array(we need to update the given one) so the last approach is best.
