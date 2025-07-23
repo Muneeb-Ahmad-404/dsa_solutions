@@ -1,0 +1,30 @@
+We are provided with a list and a int value k
+we have to rotate the list k times
+rotating the list means that we pick the element from end and put it at the start
+
+Brute force:
+    we run a loop with length k over the given list
+    and decrement k
+    for each iteration we pick the last item replace the items behind by 1 place(place all elements 
+    a place ahead) and then place the stored variable at start.
+    when the k is zero we stop
+    and now return the array
+time complexity: O(n*k)
+space complexity: O(1)
+
+Optimal:
+    we cut the array in two parts from 0 to k-1 and from k to the end.
+    now we update the array by placing the 2nd part in place of the first
+time complexity: O(n)
+space complexity: O(1)
+
+
+for an inplace solution we use the logic that we need to use the same logic but with a loop
+we run a loop over the given array and for each value of i we replace
+arr[i] with arr[len(arr)-k+i] and vice versa
+
+time complexity: O(n)
+space complexity: O(1)
+
+1,2,3,4,5,6,7
+0       p
