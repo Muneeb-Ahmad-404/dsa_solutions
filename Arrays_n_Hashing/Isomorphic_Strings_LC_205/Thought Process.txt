@@ -1,0 +1,40 @@
+We are provided with two strings and we have to check if the two strings are isomorphic
+two strings are isomorphic if the character from unique characters from first string can be mapped
+by the unique charachters of the second string.
+
+Example 1:
+
+Input: s = "egg", t = "add"
+
+Output: true
+
+Explanation:
+
+The strings s and t can be made identical by:
+
+Mapping 'e' to 'a'.
+Mapping 'g' to 'd'.
+Example 2:
+
+Input: s = "foo", t = "bar"
+
+Output: false
+
+Explanation:
+
+The strings s and t can not be made identical as 'o' needs to be mapped to both 'a' and 'r'.
+
+Example 3:
+
+Input: s = "paper", t = "title"
+
+Output: true
+
+ 
+
+Hash: we iterate over both strings at the same time.
+    for each iteration we use the char from first string as key and the second as value
+    if for a key a value exist and is different from what we are trying to put then we return false
+    else after the for loop we return true
+    similar is done by considering the second array as first and the first array as second(reversing positons)
+
