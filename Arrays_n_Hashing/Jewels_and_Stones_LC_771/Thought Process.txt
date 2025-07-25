@@ -1,0 +1,36 @@
+Jewels_and_Stones_LC_771
+We are given a string named jewels and a string names stones.
+each charachter in jewels represent a jewel.
+and each charachter in stones represent a stone.
+we need to identify the jewels in the stones. and return the count.
+Also the charachters are case sensitive
+
+Brute_force(can use str.counter):
+    run a loop over the stones and for each charachter or part of the string
+    check if the charachter is present in the jewels.
+    if present append the count by one else move next
+
+    time complexity: O(n^2)
+    space complexity: O(1)
+
+
+Hashmap(-an inbuilt option using collections.counter):
+    Use a hashmap and run a loop over the jewels.
+    for each jewel or charachter save it as a key and the value is zero.
+    Then run a loop over stones and check if present in the jewel_hash append
+    the count
+    at the end add all the counts and return answer.
+
+    time complexity: O(n+m)
+    space complexity: O(m)
+
+
+
+edge cases:
+    the stones string is empty
+    the jewels string is empty
+    both strings are empty
+    there is no jewel
+    all the stones are jewels
+    there are too many stones
+    there are too many jewels
