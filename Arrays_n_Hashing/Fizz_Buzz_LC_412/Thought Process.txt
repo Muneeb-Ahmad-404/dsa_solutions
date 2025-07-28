@@ -1,0 +1,18 @@
+Fizz_Buzz_LC_412
+We are given a number n and we have to return a list of strings
+the list is 1-indexed and the for index i divisible by 3 the value is Fizz, when it is only divisible by 5 the 
+value is Buzz and if it is divisible by both the value is FizzBuzz and for all other cases the value is the 
+index.
+
+Loop;
+    we run a loop from 1 to n
+    for each value of i we check for if it is divisible by 3, by 5, by both or none and assign values
+
+    time complexity: O(n)
+    space complexity: O(n)
+
+Edge cases;
+    n is negative:
+    n is too small
+    n is zero
+    n is too large
