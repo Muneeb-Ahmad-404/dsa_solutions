@@ -1,0 +1,20 @@
+We are being provided with a list of strings and we have to develop an inplace solution
+to reverse the list.
+
+Loop:
+    Run a loop with iterators i and j at start and end of list
+    replace the i and j placed elements.
+    and do this till i<j
+    time complexity: O(n)
+    inplace
+
+Recursion
+    time complexity: O(n)
+    space complexity: O(n)
+
+Edge cases:
+    the list is empty
+    the list is too large
+    the list is anagram
+    the list has one element
+    the list have same elements
