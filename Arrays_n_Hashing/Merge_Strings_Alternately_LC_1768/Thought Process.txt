@@ -1,0 +1,20 @@
+Merge_Strings_Alternately_LC_1768
+We are porvided with to strings and we need to create a string where we add the 
+charachters from both strings one by one alternately like a1,b1,a2,b2 and so on where a and b are the strings
+
+Brute force:
+    create a string. run a loop for the len of strings.
+    for each iteration first add the char from one string and then from the other to the new string.
+
+    at the end of loop we have our string required
+
+    time complexity : O(n)
+    space complexity: O(n)
+
+edge cases:
+    the strings could be same
+    the strings could be both empty
+    one of the strings could be empty
+    strings could be too long
+    strings could be of 1 charachter
+    one string has one charachter and the other has many
