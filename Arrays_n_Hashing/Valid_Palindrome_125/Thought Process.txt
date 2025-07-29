@@ -1,0 +1,32 @@
+Valid_Palindrome_125
+we have been provided with a string. we have to  check if it is a palindrome or not
+a palindrome is a string for which after ignoring spaces and symbols other than alphabets, if
+it reads same forward and backwards uppercase are converted to lower case
+
+Brute force:
+    a brute force would be to create a new array and then add only the elements that are alphabet to it
+    while converting them to lowerr case or converting them after the first addition.
+    then comparing the starting and ending elements like in the two pointer approach
+
+    time complexity: O(n)
+    space complexity: O(n)
+
+
+Two pointer
+    Run a loop over the given string with two pointers from start and from end.
+    if the start element or lets say left element is not an alphabet we move the left pointer ahead
+    if the right element is a symbol other then alphabets we move it backwards.
+    now when both are alphabets we compare them if they are same we iterate both i and j.
+    if different we return false.
+    then after i<j condition is true we return True.
+
+    time complexity: O(n)
+    space complexity: O(1)
+
+    Edge cases:
+
+    the string is empty
+    the string is too large 
+    the string has all alphanumeric chars
+    the string has no alphanumeric chars
+    the string has the same charachter
