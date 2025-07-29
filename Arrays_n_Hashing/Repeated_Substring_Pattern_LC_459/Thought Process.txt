@@ -1,0 +1,44 @@
+9:16
+Repeated_Substring_Pattern_LC_459
+we are provided with a string and we need to check if the string can be made 
+using a part of the substring multiple times.
+like if a group of characters are repeatedly joined to form the string or not.
+
+brute force:
+    two iterators one at end and one at start.
+    for the start element we add it into a substring.
+    then compare that to the last element if matches then good go one place behind and do the same, untill
+    you reach the start iterator.
+    if even at one place we face problem we increase the sunbstrin size by 1 and compare again by increased
+    substr at start and at end , if the iterators reach the point i<j or have the same value then we return true
+    for any other case return false
+
+    time complexity:O(n^2)
+    space complexity:O(1)
+
+    
+Optimal:
+    Could not understand myself (using ai) -burnt
+
+    Okay, let's simplify this. Forget the complex KMP and string concatenation for a moment.
+
+The problem asks: Can a given string s be built by taking a smaller part of itself and repeating it many times?
+
+Simple Explanation (Brute Force Idea):
+
+Imagine you have a string, say "abcabcabc".
+
+Could the repeating part be just "a"? No, because the next character is 'b', not 'a'.
+
+Could the repeating part be "ab"? No, because the third character is 'c', not 'a'.
+
+Could the repeating part be "abc"? Yes! Because if you repeat "abc" three times, you get "abcabcabc".
+
+So, the simplest way to solve this is to try every possible short starting piece of the string.
+
+Take the first character: Is the whole string just repetitions of this character?
+
+Take the first two characters: Is the whole string just repetitions of these two characters?
+
+Take the first three characters: Is the whole string just repetitions of these three characters?
+...and so on, up to half the length of the original string. (Because if the repeating part is longer than half, it can't repeat at least twice to form the whole string). 
