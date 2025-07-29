@@ -1,0 +1,32 @@
+rotate string lc 796
+We are provided with a string a goal. we need to check if by rotating the string we can achieve the goal
+or not.
+
+bruteforce:
+    sort both goal and string and compare
+    time complexity:O(nlogn)
+    space complexity:O(1)
+
+    true bruteforce
+    Check if len(s) equals len(goal). If not, return false.
+    If lengths are 0, return true (empty string is a rotation of itself).
+    Iterate N times (where N is the length of s). In each iteration:
+    Rotate s by one position (e.g., move the first character to the end).
+    Compare the rotated s with goal. If they match, return true.
+    If after N rotations no match is found, return false.
+    time complexity:O(N^2)
+
+hash:(will not work as we require cycles and not just anagrams)
+    add elements for the first to hash, as char:count pare
+    and for the second decrement the count.
+    if the the values for hash are zero the answer is true else false
+
+    time complexity: O(n)
+    space complexity:O(n)
+
+string concatination:
+ add the given string with it self creating a new string.
+ now check if the target exits in the doubled string as it will have all the rotation patterns init
+ time complexity:O(n)
+ space complexity:O(n)
+ 
