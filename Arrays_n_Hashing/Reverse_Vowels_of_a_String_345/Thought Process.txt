@@ -1,0 +1,19 @@
+We are provided with a string and we have to return a string
+the returned string should have its vowel elements reversed. first vowel with last and 2nd with 2nd last and so on.
+
+
+two pointers:
+    convert the string to a list
+    now use two pointers one at the end and one at start.
+    for the consonants keep adding from the left and for the vowels search from vowel at the end and swap them
+    and voila you got the reversed vowels
+
+    time complexity:O(n)
+    space complexity: O(1)
+
+edge cases:
+    the string could be empty
+    it might have no vowels
+    it might have no consonants
+    it might be too long with no vowels
+    it might be too long with all vowels
