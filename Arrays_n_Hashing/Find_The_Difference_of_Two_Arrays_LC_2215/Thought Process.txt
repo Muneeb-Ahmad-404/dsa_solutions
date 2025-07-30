@@ -1,0 +1,31 @@
+Find_The_Difference_of_Two_Arrays_LC_2215
+we are provided with two arrays. we have to return an array with characters of first array that
+are not present in the second array(list)
+
+bruteforce:
+    we run a loop over the first list and check if the char is present in the next or not, if absent
+    add it to the result array else not.
+
+    time complexity:O(n*m)
+    space complexity:O(n+m)
+
+hash_solution:
+    we run a loop over the second array and store values as char, 1 pair in a hash.
+    1 is for the presence of a character   
+    now run a loop over the first array and for each element if hash[element] == 0 we add it to the result
+    array.(for defaultdict--and for normal dict check if the element is present if not then add to the result)
+    else continue to the next iteration
+
+    time complexity:O(n+m)
+    space complexity:O(n+m)
+
+
+    or we can make sets for both sets and return the difference of the lists as (list(set1-set2), list(set2-set))
+
+Edge cases:
+    both arrays are empty
+    are too short
+    one of the arrays is empty
+    arrays are too long
+    arrays are anagrams
+    arrays have all chars distinct
