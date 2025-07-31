@@ -1,0 +1,39 @@
+Increasing_Decreasing_String_LC_1370
+You are given a string s. Reorder the string using the following algorithm:
+
+Remove the smallest character from s and append it to the result.
+Remove the smallest character from s that is greater than the last appended character, and append it to the result.
+Repeat step 2 until no more characters can be removed.
+Remove the largest character from s and append it to the result.
+Remove the largest character from s that is smaller than the last appended character, and append it to the result.
+Repeat step 5 until no more characters can be removed.
+Repeat steps 1 through 6 until all characters from s have been removed.
+
+If the smallest or largest character appears more than once, you may choose any occurrence to append to the result.
+
+Return the resulting string after reordering s using this algorithm.
+
+brute force:
+for a brute force algortihm for each task we will run a loop over the 
+given string. now to keep track of the smallest we declare variable, and one for last
+appended. now do a similar thing for the largest and last appended for the step 3, 4.
+and keep updating there numbers and run a while loop over that keeps running
+until the array has gone empty.
+time complexity:O(n^2)
+space complexity:O(1)
+
+hash:
+    ok now add the characters in a hash_map along with their count.
+    now for the first steps of adding smallest chars and moving up..
+    we need to run a loop for all the alphabets by using a list containing alphabets
+    in the right order.
+    now for each alphabet if its present in the hash we decrement its count.
+    same goes for the step 5 i guess where we need to add the largest char.
+    use a list with chars reversed? or just reversely traverse the original list.
+    now use the hash to check if the elements are present or not. if present add
+    to the answer string and decrement.
+    and so on untill the hash is empty or until we have traversed the whole length of the
+    input.
+
+    time complexity:O(26*n)
+    space complexity:(26+n)
