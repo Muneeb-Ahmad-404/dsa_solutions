@@ -1,0 +1,17 @@
+Sentence_is_Pangram_LC_1832
+a pangram is a sentence containing every alphabet atleast once.
+
+bruteforce:
+    a brute force solution would be to search the sentence for each of the english 
+    alphabet.
+    time complexity:O(26*n)
+    space complexity:O(1)
+
+set/hash:
+    for a set add all the chars of the sentence to the set.
+    if the length of the set is equal to the number of alphabets then yes its panagram
+
+    or use a hash and after mapping all he chars check the length of the hash
+
+    time complexity:O(n)
+    space complexity:O(26)

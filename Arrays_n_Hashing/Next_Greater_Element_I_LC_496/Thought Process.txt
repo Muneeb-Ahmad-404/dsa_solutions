@@ -1,0 +1,37 @@
+Next_Greater_Element_I_LC_496
+We are given to list of numbers.
+we have to return an list which contains numbers for each number of the first list.
+we need to find the element of the 1st list in the second list and find a number greater then the current ahead
+of the number in the second list.
+Now if a number is greater we add that number to the result list or we add -1 to the result list
+
+Brute Force:
+    Run a loop over the list 1.
+    for each iteration run a loop over list 2.
+    now when a check list1[i] == list2[j] is true. find any number greater then list[j] ahead of the index
+    j. if it exists add it or if not add -1.
+
+    time complexity:O(m*n)
+    space complexity:O(m)
+
+Hash-Map:
+    we run a loop over the nums2.
+    before that we initialize a deque containing the first element of nums2, 
+    and a hashmap.
+    now the loop starts from 2nd element.
+    for each curr_element compare if the element on top of deque is smaller, if yes then pop that number
+    map it with the curr_element inthe hash map and then push the curr_element to the deque.
+    keep doing this for the whole loop.
+    after the loop check for the remaining elements in the queue.
+    for each element map them with -1.
+    now run a loop over the first list and get desired answers from hte hash
+
+    time complexity:O(n)
+    space complexity:O(n)
+
+edge cases:
+    the lists can both be empty
+    the lists are too large
+    the lists have no common elements
+    there are no larger elements
+    ..

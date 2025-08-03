@@ -1,0 +1,24 @@
+Find_Words_LC_1160
+We are provided with a list of strings or words and a string.
+for each word in the list we need to check if it can be formed by the string characters by using each
+character only once in whatever sequence.
+For the words which can be formed by the given string we need to return the sum of there lenght.
+
+Brute force:    
+    run a loop over the list of words.
+    for each word run a loop over each char and check if that char exists in the
+    given string. if yes add that index to sum sort of list as memo that its not to be checked again.
+    now for the words where we have covered the whole length of the word. add its lenght to a variable.
+
+    keep doing that for each word and return the length variable
+    time complexity:O(n*w*m) n is number of words in the list w is number of chars of each word
+    and m is number of chars in the string given
+    space complexity:O(m)
+
+Hash solution:
+    make a hash for the given string where each char is mapped with its count
+    now run a loop over words.
+    now for each word make a hash and compare it with the first hash, if they match
+    then add the length if not move to the next.
+    time complexity:O(m+n)
+    space complexity:O(m+n)

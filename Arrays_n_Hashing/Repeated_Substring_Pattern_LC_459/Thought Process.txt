@@ -1,4 +1,3 @@
-9:16
 Repeated_Substring_Pattern_LC_459
 we are provided with a string and we need to check if the string can be made 
 using a part of the substring multiple times.
@@ -17,28 +16,22 @@ brute force:
     space complexity:O(1)
 
     
-Optimal:
-    Could not understand myself (using ai) -burnt
+String concatenation:
+    lets say we have a string abab. now to check if its repeating pattern we make a new string which
+    is double of the original i.e. abababab
+    now the analogy is that if a pattern exist in the string its atleast appearing 2 times
+    pattern + pattern or p + p
+    when we add the string twice the pattern should atleast be p+p + p+p 
+    here even if we remove any number of characters from the first p and last p 
+    we can still find the original string as in our doubles string as p'+p+p+p' where p' is the changed one
+    so keeping in mind that the pattern can be of single character as well we remove 1 character from
+    start and from end of the doubled string and then check if it has the original string or not.
+    if yes then yes the string follows a repetetive pattern else not.
 
-    Okay, let's simplify this. Forget the complex KMP and string concatenation for a moment.
 
-The problem asks: Can a given string s be built by taking a smaller part of itself and repeating it many times?
-
-Simple Explanation (Brute Force Idea):
-
-Imagine you have a string, say "abcabcabc".
-
-Could the repeating part be just "a"? No, because the next character is 'b', not 'a'.
-
-Could the repeating part be "ab"? No, because the third character is 'c', not 'a'.
-
-Could the repeating part be "abc"? Yes! Because if you repeat "abc" three times, you get "abcabcabc".
-
-So, the simplest way to solve this is to try every possible short starting piece of the string.
-
-Take the first character: Is the whole string just repetitions of this character?
-
-Take the first two characters: Is the whole string just repetitions of these two characters?
-
-Take the first three characters: Is the whole string just repetitions of these three characters?
-...and so on, up to half the length of the original string. (Because if the repeating part is longer than half, it can't repeat at least twice to form the whole string). 
+the current implemented solution is about starting from the center of the string.
+and checking if there is a pattern between bot halves
+then halving the first half and checking again between the two new halves and the rest of the halves.
+keep doing that untill we have reached the length.
+if during the halving we find repetition then return true
+else return false at the end

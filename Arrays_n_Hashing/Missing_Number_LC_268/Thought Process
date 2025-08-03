@@ -1,0 +1,36 @@
+Missing_Number_LC_268
+we are given an aray and we need to check which of the elements are absent from the array
+from the range 0 to n where n is the size of the array.
+
+brute force:
+    for a brute force solution we can create a array for the range 0 to n
+    then run a loop over the range.
+    for each element check if it is present in the given array or not.
+    if not then add it to the result array.
+
+    time complexity:O(n^2)
+    space complexity:O(n)
+
+hash/set:
+    add the elements of the given array in a hash as element:1 pair (1 marking the presence)
+    now run a loop for range 0, n and check which elements are absent and add those to the result.
+
+    time complexity:O(n)
+    space complexity:O(n)
+
+sum:
+    save the sum of the given array
+    save the sum of the range 0, n+1
+    if a number is missing we can get that by range_sum-given_sum
+
+    time complexity:O(n)
+    space complexity: O(1)
+
+XOR:
+    run a loop over array and set a variable missing equal to the n.
+    now for each iteration check the orgate for missing^i^nums[i]
+    the logic behind this is for each iteration based on currnet knowledge(till the idx)
+    we assume a missing element. now for each i there should be some value stored too.
+    in case of no missing value there should be a value i present any where in the array.
+    so if there is any value missing we get that value as missing, as for each pair we will get m^m which is
+    zero and for the missing one there is only i and no value stored in the array so we get that i as our missing.

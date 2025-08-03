@@ -1,0 +1,24 @@
+Is-Subsequence_LC_392
+we have been provided with two strings s and t and we have to check if s is substring of t or not.
+
+
+Brute force: 
+    we can run a loop over the first string s and for each iteration or character
+    run a loop over string j starting from i.
+    now compare the s[i] char with t[j] char. if they are same then go to next iteration
+time complexity: O(t)
+space complexity: O(1)
+
+hash: this method fails for relative positioning which is our questions concern as well
+    Run a loop over the first item and map the elements with the hash map. adding the count as value
+    now for the 2nd string do the same and this time decrementing the count for the matching elements only
+    if the values for all are zero then yes a is a substr of t.
+time complexity:O(n+m)
+space complexity:O(1)
+
+
+edge cases:
+the both strings are empty
+one of the two strings is empty
+the strings are too long
+the strings have nothing in common.
